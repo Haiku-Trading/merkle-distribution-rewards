@@ -10,7 +10,24 @@ import { task, HardhatUserConfig } from 'hardhat/config';
 import { Networks, getNetwork } from '@1inch/solidity-utils/hardhat-setup';
 import { dropTask, verifyDeploymentTask, deployQRDrop, verifyLinksTask, collectStatsTask, rescueTask } from './src/tasks/hardhat-drop-task';
 
-const { networks, etherscan } = new Networks().registerAll();
+const networksInstance = new Networks();
+const { networks: registeredNetworks, etherscan } = networksInstance.registerAll();
+
+// Register Base network manually if not already registered
+// Base mainnet: chainId 8453
+// Use BASE_RPC_URL from env, or fallback to public RPC
+const baseRpcUrl = process.env.BASE_RPC_URL || 'https://mainnet.base.org';
+const privateKey = process.env.PRIVATE_KEY;
+
+// Add Base network configuration
+const networks: typeof registeredNetworks = {
+    ...registeredNetworks,
+    base: {
+        url: baseRpcUrl,
+        chainId: 8453,
+        accounts: privateKey ? [privateKey] : [],
+    },
+};
 
 /**
  * Deploy QR-based Merkle Drop Contract
@@ -227,8 +244,24 @@ task('rescue', 'Rescue remaining tokens from a deployed merkle drop contract')
         await rescueTask(hre, taskArgs.v);
     });
 
+// Update etherscan config to include Base network
+const etherscanConfig = {
+    ...etherscan,
+    customChains: [
+        ...(etherscan.customChains || []),
+        {
+            network: 'base',
+            chainId: 8453,
+            urls: {
+                apiURL: 'https://api.basescan.org/api',
+                browserURL: 'https://basescan.org',
+            },
+        },
+    ],
+};
+
 const config: HardhatUserConfig = {
-    etherscan,
+    etherscan: etherscanConfig,
     solidity: {
         settings: {
             optimizer: {

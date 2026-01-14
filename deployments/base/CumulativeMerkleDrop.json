@@ -1,0 +1,422 @@
+{
+  "address": "0x63CF5F686B36Ce7dFe7Db46f28bE43E9EB97BcB4",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidProof",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "MerkleRootWasUpdated",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NothingToClaim",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableInvalidOwner",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "OwnableUnauthorizedAccount",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "SafeTransferFailed",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Claimed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "oldMerkleRoot",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "newMerkleRoot",
+          "type": "bytes32"
+        }
+      ],
+      "name": "MerkelRootUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "cumulativeAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "expectedMerkleRoot",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "merkleProof",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "claim",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "cumulativeClaimed",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "merkleRoot",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "merkleRoot_",
+          "type": "bytes32"
+        }
+      ],
+      "name": "setMerkleRoot",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x9ed532db5a0fddadc2e8049ecc1b3f14625af9d288c6f758c39fce44a11b3061",
+  "receipt": {
+    "to": null,
+    "from": "0x3688055B0C9aDE5aE1b4145f6C746e6193067a6E",
+    "contractAddress": "0x63CF5F686B36Ce7dFe7Db46f28bE43E9EB97BcB4",
+    "transactionIndex": 35,
+    "gasUsed": "465300",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800040000000000001000000000000000000000000000000000000000000000000000000000800000000000000000000000000000000000001000000000000400000000000000000000000020000000000000000000800000000000000000000000000000000400000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xbac48e7640668b96953a6e79438fe9ed19df65b1c470314585bdd3e7eef4b61b",
+    "transactionHash": "0x9ed532db5a0fddadc2e8049ecc1b3f14625af9d288c6f758c39fce44a11b3061",
+    "logs": [
+      {
+        "transactionIndex": 35,
+        "blockNumber": 40787516,
+        "transactionHash": "0x9ed532db5a0fddadc2e8049ecc1b3f14625af9d288c6f758c39fce44a11b3061",
+        "address": "0x63CF5F686B36Ce7dFe7Db46f28bE43E9EB97BcB4",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x0000000000000000000000003688055b0c9ade5ae1b4145f6c746e6193067a6e"
+        ],
+        "data": "0x",
+        "logIndex": 316,
+        "blockHash": "0xbac48e7640668b96953a6e79438fe9ed19df65b1c470314585bdd3e7eef4b61b"
+      }
+    ],
+    "blockNumber": 40787516,
+    "cumulativeGasUsed": "11900147",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "69ffb122290781f1ecc0caae24596527",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.23+commit.f704f362\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token_\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"InvalidProof\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"MerkleRootWasUpdated\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NothingToClaim\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"OwnableInvalidOwner\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"OwnableUnauthorizedAccount\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"SafeTransferFailed\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"Claimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"oldMerkleRoot\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"newMerkleRoot\",\"type\":\"bytes32\"}],\"name\":\"MerkelRootUpdated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"cumulativeAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes32\",\"name\":\"expectedMerkleRoot\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32[]\",\"name\":\"merkleProof\",\"type\":\"bytes32[]\"}],\"name\":\"claim\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"cumulativeClaimed\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"merkleRoot\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"merkleRoot_\",\"type\":\"bytes32\"}],\"name\":\"setMerkleRoot\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"1inch Network\",\"details\":\"This contract allows users to claim tokens based on a Merkle tree where each leaf contains the cumulative amount a user can claim. This design allows for multiple distributions without requiring users to claim from each one separately.\",\"errors\":{\"OwnableInvalidOwner(address)\":[{\"details\":\"The owner is not a valid owner account. (eg. `address(0)`)\"}],\"OwnableUnauthorizedAccount(address)\":[{\"details\":\"The caller account is not authorized to perform an operation.\"}]},\"events\":{\"Claimed(address,uint256)\":{\"params\":{\"account\":\"The account that claimed tokens\",\"amount\":\"The amount of tokens claimed\"}},\"MerkelRootUpdated(bytes32,bytes32)\":{\"params\":{\"newMerkleRoot\":\"The new Merkle root\",\"oldMerkleRoot\":\"The previous Merkle root\"}}},\"kind\":\"dev\",\"methods\":{\"claim(address,uint256,bytes32,bytes32[])\":{\"details\":\"The cumulative amount represents the total tokens the account can claim across all distributions\",\"params\":{\"account\":\"The address of the account to claim for\",\"cumulativeAmount\":\"The total cumulative amount the account is entitled to\",\"expectedMerkleRoot\":\"The Merkle root the proof was generated for\",\"merkleProof\":\"The Merkle proof verifying the claim\"}},\"constructor\":{\"params\":{\"token_\":\"The address of the ERC20 token to be distributed\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner.\"},\"setMerkleRoot(bytes32)\":{\"details\":\"Only callable by the contract owner\",\"params\":{\"merkleRoot_\":\"The new Merkle root to set\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"CumulativeMerkleDrop\",\"version\":1},\"userdoc\":{\"events\":{\"Claimed(address,uint256)\":{\"notice\":\"Emitted when tokens are successfully claimed\"},\"MerkelRootUpdated(bytes32,bytes32)\":{\"notice\":\"Emitted when the Merkle root is updated\"}},\"kind\":\"user\",\"methods\":{\"claim(address,uint256,bytes32,bytes32[])\":{\"notice\":\"Claims tokens for a given account using a Merkle proof\"},\"constructor\":{\"notice\":\"Constructs the CumulativeMerkleDrop contract\"},\"cumulativeClaimed(address)\":{\"notice\":\"Mapping of addresses to their cumulative claimed amounts\"},\"merkleRoot()\":{\"notice\":\"The current Merkle root for the distribution\"},\"setMerkleRoot(bytes32)\":{\"notice\":\"Updates the Merkle root for the distribution\"},\"token()\":{\"notice\":\"The ERC20 token being distributed\"}},\"notice\":\"A contract for distributing tokens via Merkle tree proofs with cumulative claim amounts\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/CumulativeMerkleDrop.sol\":\"CumulativeMerkleDrop\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[]},\"sources\":{\"@1inch/solidity-utils/contracts/interfaces/IDaiLikePermit.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @title IDaiLikePermit\\n * @dev Interface for Dai-like permit function allowing token spending via signatures.\\n */\\ninterface IDaiLikePermit {\\n    /**\\n     * @notice Approves spending of tokens via off-chain signatures.\\n     * @param holder Token holder's address.\\n     * @param spender Spender's address.\\n     * @param nonce Current nonce of the holder.\\n     * @param expiry Time when the permit expires.\\n     * @param allowed True to allow, false to disallow spending.\\n     * @param v, r, s Signature components.\\n     */\\n    function permit(\\n        address holder,\\n        address spender,\\n        uint256 nonce,\\n        uint256 expiry,\\n        bool allowed,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) external;\\n}\\n\",\"keccak256\":\"0xf8636c1c4631641c7b40ac65cd69e6ae04a99cf3358426c642dec02c6c774c82\",\"license\":\"MIT\"},\"@1inch/solidity-utils/contracts/interfaces/IERC7597Permit.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @title IERC7597Permit\\n * @dev A new extension for ERC-2612 permit, which has already been added to USDC v2.2.\\n */\\ninterface IERC7597Permit {\\n    /**\\n     * @notice Update allowance with a signed permit.\\n     * @dev Signature bytes can be used for both EOA wallets and contract wallets.\\n     * @param owner Token owner's address (Authorizer).\\n     * @param spender Spender's address.\\n     * @param value Amount of allowance.\\n     * @param deadline The time at which the signature expires (unixtime).\\n     * @param signature Unstructured bytes signature signed by an EOA wallet or a contract wallet.\\n     */\\n    function permit(\\n        address owner,\\n        address spender,\\n        uint256 value,\\n        uint256 deadline,\\n        bytes memory signature\\n    ) external;\\n}\\n\",\"keccak256\":\"0xaf148ecd4db0f44989a7417f6945bcfd18273c5096bc2b364e314e42c85c78cd\",\"license\":\"MIT\"},\"@1inch/solidity-utils/contracts/interfaces/IPermit2.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @title IPermit2\\n * @dev Interface for a flexible permit system that extends ERC20 tokens to support permits in tokens lacking native permit functionality.\\n */\\ninterface IPermit2 {\\n    /**\\n     * @dev Struct for holding permit details.\\n     * @param token ERC20 token address for which the permit is issued.\\n     * @param amount The maximum amount allowed to spend.\\n     * @param expiration Timestamp until which the permit is valid.\\n     * @param nonce An incrementing value for each signature, unique per owner, token, and spender.\\n     */\\n    struct PermitDetails {\\n        address token;\\n        uint160 amount;\\n        uint48 expiration;\\n        uint48 nonce;\\n    }\\n\\n    /**\\n     * @dev Struct for a single token allowance permit.\\n     * @param details Permit details including token, amount, expiration, and nonce.\\n     * @param spender Address authorized to spend the tokens.\\n     * @param sigDeadline Deadline for the permit signature, ensuring timeliness of the permit.\\n     */\\n    struct PermitSingle {\\n        PermitDetails details;\\n        address spender;\\n        uint256 sigDeadline;\\n    }\\n\\n    /**\\n     * @dev Struct for packed allowance data to optimize storage.\\n     * @param amount Amount allowed.\\n     * @param expiration Permission expiry timestamp.\\n     * @param nonce Unique incrementing value for tracking allowances.\\n     */\\n    struct PackedAllowance {\\n        uint160 amount;\\n        uint48 expiration;\\n        uint48 nonce;\\n    }\\n\\n    /**\\n     * @notice Executes a token transfer from one address to another.\\n     * @param user The token owner's address.\\n     * @param spender The address authorized to spend the tokens.\\n     * @param amount The amount of tokens to transfer.\\n     * @param token The address of the token being transferred.\\n     */\\n    function transferFrom(address user, address spender, uint160 amount, address token) external;\\n\\n    /**\\n     * @notice Issues a permit for spending tokens via a signed authorization.\\n     * @param owner The token owner's address.\\n     * @param permitSingle Struct containing the permit details.\\n     * @param signature The signature proving the owner authorized the permit.\\n     */\\n    function permit(address owner, PermitSingle memory permitSingle, bytes calldata signature) external;\\n\\n    /**\\n     * @notice Retrieves the allowance details between a token owner and spender.\\n     * @param user The token owner's address.\\n     * @param token The token address.\\n     * @param spender The spender's address.\\n     * @return The packed allowance details.\\n     */\\n    function allowance(address user, address token, address spender) external view returns (PackedAllowance memory);\\n\\n    /**\\n     * @notice Approves the spender to use up to amount of the specified token up until the expiration\\n     * @param token The token to approve\\n     * @param spender The spender address to approve\\n     * @param amount The approved amount of the token\\n     * @param expiration The timestamp at which the approval is no longer valid\\n     * @dev The packed allowance also holds a nonce, which will stay unchanged in approve\\n     * @dev Setting amount to type(uint160).max sets an unlimited approval\\n     */\\n    function approve(address token, address spender, uint160 amount, uint48 expiration) external;\\n}\\n\",\"keccak256\":\"0x2ac37c62bb4a4941c1d353df6ac08750542c540234aa24409ac67373651a478a\",\"license\":\"MIT\"},\"@1inch/solidity-utils/contracts/interfaces/IWETH.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts/token/ERC20/IERC20.sol\\\";\\n\\n/**\\n * @title IWETH\\n * @dev Interface for wrapper as WETH-like token.\\n */\\ninterface IWETH is IERC20 {\\n    /**\\n     * @notice Emitted when Ether is deposited to get wrapper tokens.\\n     */\\n    event Deposit(address indexed dst, uint256 wad);\\n\\n    /**\\n     * @notice Emitted when wrapper tokens is withdrawn as Ether.\\n     */\\n    event Withdrawal(address indexed src, uint256 wad);\\n\\n    /**\\n     * @notice Deposit Ether to get wrapper tokens.\\n     */\\n    function deposit() external payable;\\n\\n    /**\\n     * @notice Withdraw wrapped tokens as Ether.\\n     * @param amount Amount of wrapped tokens to withdraw.\\n     */\\n    function withdraw(uint256 amount) external;\\n}\\n\",\"keccak256\":\"0x32989b79850e8a1ac6aab74878de2883f9537656ca06910dc0ae76833cc446e2\",\"license\":\"MIT\"},\"@1inch/solidity-utils/contracts/libraries/RevertReasonForwarder.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @title RevertReasonForwarder\\n * @notice Provides utilities for forwarding and retrieving revert reasons from failed external calls.\\n */\\nlibrary RevertReasonForwarder {\\n    /**\\n     * @dev Forwards the revert reason from the latest external call.\\n     * This method allows propagating the revert reason of a failed external call to the caller.\\n     */\\n    function reRevert() internal pure {\\n        // bubble up revert reason from latest external call\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            let ptr := mload(0x40)\\n            returndatacopy(ptr, 0, returndatasize())\\n            revert(ptr, returndatasize())\\n        }\\n    }\\n\\n    /**\\n     * @dev Retrieves the revert reason from the latest external call.\\n     * This method enables capturing the revert reason of a failed external call for inspection or processing.\\n     * @return reason The latest external call revert reason.\\n     */\\n    function reReason() internal pure returns (bytes memory reason) {\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            reason := mload(0x40)\\n            let length := returndatasize()\\n            mstore(reason, length)\\n            returndatacopy(add(reason, 0x20), 0, length)\\n            mstore(0x40, add(reason, add(0x20, length)))\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x97d8c950981f4da44ae1b01d9e597c4f99377797ec7ff7b1ef9648e4ecc1baa4\",\"license\":\"MIT\"},\"@1inch/solidity-utils/contracts/libraries/SafeERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"@openzeppelin/contracts/token/ERC20/IERC20.sol\\\";\\nimport \\\"@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol\\\";\\nimport \\\"../interfaces/IDaiLikePermit.sol\\\";\\nimport \\\"../interfaces/IPermit2.sol\\\";\\nimport \\\"../interfaces/IERC7597Permit.sol\\\";\\nimport \\\"../interfaces/IWETH.sol\\\";\\nimport \\\"../libraries/RevertReasonForwarder.sol\\\";\\n\\n/**\\n * @title Implements efficient safe methods for ERC20 interface.\\n * @notice Compared to the standard ERC20, this implementation offers several enhancements:\\n * 1. more gas-efficient, providing significant savings in transaction costs.\\n * 2. support for different permit implementations\\n * 3. forceApprove functionality\\n * 4. support for WETH deposit and withdraw\\n */\\nlibrary SafeERC20 {\\n    error SafeTransferFailed();\\n    error SafeTransferFromFailed();\\n    error ForceApproveFailed();\\n    error SafeIncreaseAllowanceFailed();\\n    error SafeDecreaseAllowanceFailed();\\n    error SafePermitBadLength();\\n    error Permit2TransferAmountTooHigh();\\n\\n    // Uniswap Permit2 address\\n    address private constant _PERMIT2 = 0x000000000022D473030F116dDEE9F6B43aC78BA3;\\n    address private constant _PERMIT2_ZKSYNC = 0x0000000000225e31D15943971F47aD3022F714Fa;\\n    bytes4 private constant _PERMIT_LENGTH_ERROR = 0x68275857;  // SafePermitBadLength.selector\\n\\n    /**\\n     * @notice Fetches the balance of a specific ERC20 token held by an account.\\n     * Consumes less gas then regular `ERC20.balanceOf`.\\n     * @dev Note that the implementation does not perform dirty bits cleaning, so it is the\\n     * responsibility of the caller to make sure that the higher 96 bits of the `account` parameter are clean.\\n     * @param token The IERC20 token contract for which the balance will be fetched.\\n     * @param account The address of the account whose token balance will be fetched.\\n     * @return tokenBalance The balance of the specified ERC20 token held by the account.\\n     */\\n    function safeBalanceOf(\\n        IERC20 token,\\n        address account\\n    ) internal view returns(uint256 tokenBalance) {\\n        bytes4 selector = IERC20.balanceOf.selector;\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            mstore(0x00, selector)\\n            mstore(0x04, account)\\n            let success := staticcall(gas(), token, 0x00, 0x24, 0x00, 0x20)\\n            tokenBalance := mload(0)\\n\\n            if or(iszero(success), lt(returndatasize(), 0x20)) {\\n                let ptr := mload(0x40)\\n                returndatacopy(ptr, 0, returndatasize())\\n                revert(ptr, returndatasize())\\n            }\\n        }\\n    }\\n\\n    /**\\n     * @notice Attempts to safely transfer tokens from one address to another.\\n     * @dev If permit2 is true, uses the Permit2 standard; otherwise uses the standard ERC20 transferFrom.\\n     * Either requires `true` in return data, or requires target to be smart-contract and empty return data.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `from` and `to` parameters are clean.\\n     * @param token The IERC20 token contract from which the tokens will be transferred.\\n     * @param from The address from which the tokens will be transferred.\\n     * @param to The address to which the tokens will be transferred.\\n     * @param amount The amount of tokens to transfer.\\n     * @param permit2 If true, uses the Permit2 standard for the transfer; otherwise uses the standard ERC20 transferFrom.\\n     */\\n    function safeTransferFromUniversal(\\n        IERC20 token,\\n        address from,\\n        address to,\\n        uint256 amount,\\n        bool permit2\\n    ) internal {\\n        if (permit2) {\\n            safeTransferFromPermit2(token, from, to, amount);\\n        } else {\\n            safeTransferFrom(token, from, to, amount);\\n        }\\n    }\\n\\n    /**\\n     * @notice Attempts to safely transfer tokens from one address to another using the ERC20 standard.\\n     * @dev Either requires `true` in return data, or requires target to be smart-contract and empty return data.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `from` and `to` parameters are clean.\\n     * @param token The IERC20 token contract from which the tokens will be transferred.\\n     * @param from The address from which the tokens will be transferred.\\n     * @param to The address to which the tokens will be transferred.\\n     * @param amount The amount of tokens to transfer.\\n     */\\n    function safeTransferFrom(\\n        IERC20 token,\\n        address from,\\n        address to,\\n        uint256 amount\\n    ) internal {\\n        bytes4 selector = token.transferFrom.selector;\\n        bool success;\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            let data := mload(0x40)\\n\\n            mstore(data, selector)\\n            mstore(add(data, 0x04), from)\\n            mstore(add(data, 0x24), to)\\n            mstore(add(data, 0x44), amount)\\n            success := call(gas(), token, 0, data, 0x64, 0x0, 0x20)\\n            if success {\\n                switch returndatasize()\\n                case 0 {\\n                    success := gt(extcodesize(token), 0)\\n                }\\n                default {\\n                    success := and(gt(returndatasize(), 31), eq(mload(0), 1))\\n                }\\n            }\\n        }\\n        if (!success) revert SafeTransferFromFailed();\\n    }\\n\\n    /**\\n     * @notice Attempts to safely transfer tokens from one address to another using the Permit2 standard.\\n     * @dev Either requires `true` in return data, or requires target to be smart-contract and empty return data.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `from` and `to` parameters are clean.\\n     * @param token The IERC20 token contract from which the tokens will be transferred.\\n     * @param from The address from which the tokens will be transferred.\\n     * @param to The address to which the tokens will be transferred.\\n     * @param amount The amount of tokens to transfer.\\n     */\\n    function safeTransferFromPermit2(\\n        IERC20 token,\\n        address from,\\n        address to,\\n        uint256 amount\\n    ) internal {\\n        if (amount > type(uint160).max) revert Permit2TransferAmountTooHigh();\\n        address permit2 = _getPermit2Address();\\n        bytes4 selector = IPermit2.transferFrom.selector;\\n        bool success;\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            let data := mload(0x40)\\n\\n            mstore(data, selector)\\n            mstore(add(data, 0x04), from)\\n            mstore(add(data, 0x24), to)\\n            mstore(add(data, 0x44), amount)\\n            mstore(add(data, 0x64), token)\\n            success := call(gas(), permit2, 0, data, 0x84, 0x0, 0x0)\\n            if success {\\n                success := gt(extcodesize(permit2), 0)\\n            }\\n        }\\n        if (!success) revert SafeTransferFromFailed();\\n    }\\n\\n    /**\\n     * @notice Attempts to safely transfer tokens to another address.\\n     * @dev Either requires `true` in return data, or requires target to be smart-contract and empty return data.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `to` parameter are clean.\\n     * @param token The IERC20 token contract from which the tokens will be transferred.\\n     * @param to The address to which the tokens will be transferred.\\n     * @param amount The amount of tokens to transfer.\\n     */\\n    function safeTransfer(\\n        IERC20 token,\\n        address to,\\n        uint256 amount\\n    ) internal {\\n        if (!_makeCall(token, token.transfer.selector, to, amount)) {\\n            revert SafeTransferFailed();\\n        }\\n    }\\n\\n    /**\\n     * @notice Attempts to approve a spender to spend a certain amount of tokens.\\n     * @dev If `approve(from, to, amount)` fails, it tries to set the allowance to zero, and retries the `approve` call.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `spender` parameter are clean.\\n     * @param token The IERC20 token contract on which the call will be made.\\n     * @param spender The address which will spend the funds.\\n     * @param value The amount of tokens to be spent.\\n     */\\n    function forceApprove(\\n        IERC20 token,\\n        address spender,\\n        uint256 value\\n    ) internal {\\n        if (!_makeCall(token, token.approve.selector, spender, value)) {\\n            if (\\n                !_makeCall(token, token.approve.selector, spender, 0) ||\\n                !_makeCall(token, token.approve.selector, spender, value)\\n            ) {\\n                revert ForceApproveFailed();\\n            }\\n        }\\n    }\\n\\n    /**\\n     * @notice Safely increases the allowance of a spender.\\n     * @dev Increases with safe math check. Checks if the increased allowance will overflow, if yes, then it reverts the transaction.\\n     * Then uses `forceApprove` to increase the allowance.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `spender` parameter are clean.\\n     * @param token The IERC20 token contract on which the call will be made.\\n     * @param spender The address which will spend the funds.\\n     * @param value The amount of tokens to increase the allowance by.\\n     */\\n    function safeIncreaseAllowance(\\n        IERC20 token,\\n        address spender,\\n        uint256 value\\n    ) internal {\\n        uint256 allowance = token.allowance(address(this), spender);\\n        if (value > type(uint256).max - allowance) revert SafeIncreaseAllowanceFailed();\\n        forceApprove(token, spender, allowance + value);\\n    }\\n\\n    /**\\n     * @notice Safely decreases the allowance of a spender.\\n     * @dev Decreases with safe math check. Checks if the decreased allowance will underflow, if yes, then it reverts the transaction.\\n     * Then uses `forceApprove` to increase the allowance.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `spender` parameter are clean.\\n     * @param token The IERC20 token contract on which the call will be made.\\n     * @param spender The address which will spend the funds.\\n     * @param value The amount of tokens to decrease the allowance by.\\n     */\\n    function safeDecreaseAllowance(\\n        IERC20 token,\\n        address spender,\\n        uint256 value\\n    ) internal {\\n        uint256 allowance = token.allowance(address(this), spender);\\n        if (value > allowance) revert SafeDecreaseAllowanceFailed();\\n        forceApprove(token, spender, allowance - value);\\n    }\\n\\n    /**\\n     * @notice Attempts to execute the `permit` function on the provided token with the sender and contract as parameters.\\n     * Permit type is determined automatically based on permit calldata (IERC20Permit, IDaiLikePermit, and IPermit2).\\n     * @dev Wraps `tryPermit` function and forwards revert reason if permit fails.\\n     * @param token The IERC20 token to execute the permit function on.\\n     * @param permit The permit data to be used in the function call.\\n     */\\n    function safePermit(IERC20 token, bytes calldata permit) internal {\\n        if (!tryPermit(token, msg.sender, address(this), permit)) RevertReasonForwarder.reRevert();\\n    }\\n\\n    /**\\n     * @notice Attempts to execute the `permit` function on the provided token with custom owner and spender parameters.\\n     * Permit type is determined automatically based on permit calldata (IERC20Permit, IDaiLikePermit, and IPermit2).\\n     * @dev Wraps `tryPermit` function and forwards revert reason if permit fails.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `owner` and `spender` parameters are clean.\\n     * @param token The IERC20 token to execute the permit function on.\\n     * @param owner The owner of the tokens for which the permit is made.\\n     * @param spender The spender allowed to spend the tokens by the permit.\\n     * @param permit The permit data to be used in the function call.\\n     */\\n    function safePermit(IERC20 token, address owner, address spender, bytes calldata permit) internal {\\n        if (!tryPermit(token, owner, spender, permit)) RevertReasonForwarder.reRevert();\\n    }\\n\\n    /**\\n     * @notice Attempts to execute the `permit` function on the provided token with the sender and contract as parameters.\\n     * @dev Invokes `tryPermit` with sender as owner and contract as spender.\\n     * @param token The IERC20 token to execute the permit function on.\\n     * @param permit The permit data to be used in the function call.\\n     * @return success Returns true if the permit function was successfully executed, false otherwise.\\n     */\\n    function tryPermit(IERC20 token, bytes calldata permit) internal returns(bool success) {\\n        return tryPermit(token, msg.sender, address(this), permit);\\n    }\\n\\n    /**\\n     * @notice The function attempts to call the permit function on a given ERC20 token.\\n     * @dev The function is designed to support a variety of permit functions, namely: IERC20Permit, IDaiLikePermit, IERC7597Permit and IPermit2.\\n     * It accommodates both Compact and Full formats of these permit types.\\n     * Please note, it is expected that the `expiration` parameter for the compact Permit2 and the `deadline` parameter\\n     * for the compact Permit are to be incremented by one before invoking this function. This approach is motivated by\\n     * gas efficiency considerations; as the unlimited expiration period is likely to be the most common scenario, and\\n     * zeros are cheaper to pass in terms of gas cost. Thus, callers should increment the expiration or deadline by one\\n     * before invocation for optimized performance.\\n     * Note that the implementation does not perform dirty bits cleaning, so it is the responsibility of\\n     * the caller to make sure that the higher 96 bits of the `owner` and `spender` parameters are clean.\\n     * @param token The address of the ERC20 token on which to call the permit function.\\n     * @param owner The owner of the tokens. This address should have signed the off-chain permit.\\n     * @param spender The address which will be approved for transfer of tokens.\\n     * @param permit The off-chain permit data, containing different fields depending on the type of permit function.\\n     * @return success A boolean indicating whether the permit call was successful.\\n     */\\n    function tryPermit(IERC20 token, address owner, address spender, bytes calldata permit) internal returns(bool success) {\\n        address permit2 = _getPermit2Address();\\n        // load function selectors for different permit standards\\n        bytes4 permitSelector = IERC20Permit.permit.selector;\\n        bytes4 daiPermitSelector = IDaiLikePermit.permit.selector;\\n        bytes4 permit2Selector = IPermit2.permit.selector;\\n        bytes4 erc7597PermitSelector = IERC7597Permit.permit.selector;\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            let ptr := mload(0x40)\\n\\n            // Switch case for different permit lengths, indicating different permit standards\\n            switch permit.length\\n            // Compact IERC20Permit\\n            case 100 {\\n                mstore(ptr, permitSelector)     // store selector\\n                mstore(add(ptr, 0x04), owner)   // store owner\\n                mstore(add(ptr, 0x24), spender) // store spender\\n\\n                // Compact IERC20Permit.permit(uint256 value, uint32 deadline, uint256 r, uint256 vs)\\n                {  // stack too deep\\n                    let deadline := shr(224, calldataload(add(permit.offset, 0x20))) // loads permit.offset 0x20..0x23\\n                    let vs := calldataload(add(permit.offset, 0x44))                 // loads permit.offset 0x44..0x63\\n\\n                    calldatacopy(add(ptr, 0x44), permit.offset, 0x20)            // store value     = copy permit.offset 0x00..0x19\\n                    mstore(add(ptr, 0x64), sub(deadline, 1))                     // store deadline  = deadline - 1\\n                    mstore(add(ptr, 0x84), add(27, shr(255, vs)))                // store v         = most significant bit of vs + 27 (27 or 28)\\n                    calldatacopy(add(ptr, 0xa4), add(permit.offset, 0x24), 0x20) // store r         = copy permit.offset 0x24..0x43\\n                    mstore(add(ptr, 0xc4), shr(1, shl(1, vs)))                   // store s         = vs without most significant bit\\n                }\\n                // IERC20Permit.permit(address owner, address spender, uint256 value, uint256 deadline, uint8 v, bytes32 r, bytes32 s)\\n                success := call(gas(), token, 0, ptr, 0xe4, 0, 0)\\n            }\\n            // Compact IDaiLikePermit\\n            case 72 {\\n                mstore(ptr, daiPermitSelector)  // store selector\\n                mstore(add(ptr, 0x04), owner)   // store owner\\n                mstore(add(ptr, 0x24), spender) // store spender\\n\\n                // Compact IDaiLikePermit.permit(uint32 nonce, uint32 expiry, uint256 r, uint256 vs)\\n                {  // stack too deep\\n                    let expiry := shr(224, calldataload(add(permit.offset, 0x04))) // loads permit.offset 0x04..0x07\\n                    let vs := calldataload(add(permit.offset, 0x28))               // loads permit.offset 0x28..0x47\\n\\n                    mstore(add(ptr, 0x44), shr(224, calldataload(permit.offset))) // store nonce   = copy permit.offset 0x00..0x03\\n                    mstore(add(ptr, 0x64), sub(expiry, 1))                        // store expiry  = expiry - 1\\n                    mstore(add(ptr, 0x84), true)                                  // store allowed = true\\n                    mstore(add(ptr, 0xa4), add(27, shr(255, vs)))                 // store v       = most significant bit of vs + 27 (27 or 28)\\n                    calldatacopy(add(ptr, 0xc4), add(permit.offset, 0x08), 0x20)  // store r       = copy permit.offset 0x08..0x27\\n                    mstore(add(ptr, 0xe4), shr(1, shl(1, vs)))                    // store s       = vs without most significant bit\\n                }\\n                // IDaiLikePermit.permit(address holder, address spender, uint256 nonce, uint256 expiry, bool allowed, uint8 v, bytes32 r, bytes32 s)\\n                success := call(gas(), token, 0, ptr, 0x104, 0, 0)\\n            }\\n            // IERC20Permit\\n            case 224 {\\n                mstore(ptr, permitSelector)\\n                calldatacopy(add(ptr, 0x04), permit.offset, permit.length) // copy permit calldata\\n                // IERC20Permit.permit(address owner, address spender, uint256 value, uint256 deadline, uint8 v, bytes32 r, bytes32 s)\\n                success := call(gas(), token, 0, ptr, 0xe4, 0, 0)\\n            }\\n            // IDaiLikePermit\\n            case 256 {\\n                mstore(ptr, daiPermitSelector)\\n                calldatacopy(add(ptr, 0x04), permit.offset, permit.length) // copy permit calldata\\n                // IDaiLikePermit.permit(address holder, address spender, uint256 nonce, uint256 expiry, bool allowed, uint8 v, bytes32 r, bytes32 s)\\n                success := call(gas(), token, 0, ptr, 0x104, 0, 0)\\n            }\\n            // Compact IPermit2\\n            case 96 {\\n                // Compact IPermit2.permit(uint160 amount, uint32 expiration, uint32 nonce, uint32 sigDeadline, uint256 r, uint256 vs)\\n                mstore(ptr, permit2Selector)  // store selector\\n                mstore(add(ptr, 0x04), owner) // store owner\\n                mstore(add(ptr, 0x24), token) // store token\\n\\n                calldatacopy(add(ptr, 0x50), permit.offset, 0x14)             // store amount = copy permit.offset 0x00..0x13\\n                // and(0xffffffffffff, ...) - conversion to uint48\\n                mstore(add(ptr, 0x64), and(0xffffffffffff, sub(shr(224, calldataload(add(permit.offset, 0x14))), 1))) // store expiration = ((permit.offset 0x14..0x17 - 1) & 0xffffffffffff)\\n                mstore(add(ptr, 0x84), shr(224, calldataload(add(permit.offset, 0x18)))) // store nonce = copy permit.offset 0x18..0x1b\\n                mstore(add(ptr, 0xa4), spender)                               // store spender\\n                // and(0xffffffffffff, ...) - conversion to uint48\\n                mstore(add(ptr, 0xc4), and(0xffffffffffff, sub(shr(224, calldataload(add(permit.offset, 0x1c))), 1))) // store sigDeadline = ((permit.offset 0x1c..0x1f - 1) & 0xffffffffffff)\\n                mstore(add(ptr, 0xe4), 0x100)                                 // store offset = 256\\n                mstore(add(ptr, 0x104), 0x40)                                 // store length = 64\\n                calldatacopy(add(ptr, 0x124), add(permit.offset, 0x20), 0x20) // store r      = copy permit.offset 0x20..0x3f\\n                calldatacopy(add(ptr, 0x144), add(permit.offset, 0x40), 0x20) // store vs     = copy permit.offset 0x40..0x5f\\n                // IPermit2.permit(address owner, PermitSingle calldata permitSingle, bytes calldata signature)\\n                success := call(gas(), permit2, 0, ptr, 0x164, 0, 0)\\n            }\\n            // IPermit2\\n            case 352 {\\n                mstore(ptr, permit2Selector)\\n                calldatacopy(add(ptr, 0x04), permit.offset, permit.length) // copy permit calldata\\n                // IPermit2.permit(address owner, PermitSingle calldata permitSingle, bytes calldata signature)\\n                success := call(gas(), permit2, 0, ptr, 0x164, 0, 0)\\n            }\\n            // Dynamic length\\n            default {\\n                mstore(ptr, erc7597PermitSelector)\\n                calldatacopy(add(ptr, 0x04), permit.offset, permit.length) // copy permit calldata\\n                // IERC7597Permit.permit(address owner, address spender, uint256 value, uint256 deadline, bytes memory signature)\\n                success := call(gas(), token, 0, ptr, add(permit.length, 4), 0, 0)\\n            }\\n        }\\n    }\\n\\n    /**\\n     * @dev Executes a low level call to a token contract, making it resistant to reversion and erroneous boolean returns.\\n     * @param token The IERC20 token contract on which the call will be made.\\n     * @param selector The function signature that is to be called on the token contract.\\n     * @param to The address to which the token amount will be transferred.\\n     * @param amount The token amount to be transferred.\\n     * @return success A boolean indicating if the call was successful. Returns 'true' on success and 'false' on failure.\\n     * In case of success but no returned data, validates that the contract code exists.\\n     * In case of returned data, ensures that it's a boolean `true`.\\n     */\\n    function _makeCall(\\n        IERC20 token,\\n        bytes4 selector,\\n        address to,\\n        uint256 amount\\n    ) private returns (bool success) {\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            let data := mload(0x40)\\n\\n            mstore(data, selector)\\n            mstore(add(data, 0x04), to)\\n            mstore(add(data, 0x24), amount)\\n            success := call(gas(), token, 0, data, 0x44, 0x0, 0x20)\\n            if success {\\n                switch returndatasize()\\n                case 0 {\\n                    success := gt(extcodesize(token), 0)\\n                }\\n                default {\\n                    success := and(gt(returndatasize(), 31), eq(mload(0), 1))\\n                }\\n            }\\n        }\\n    }\\n\\n    /**\\n     * @notice Safely deposits a specified amount of Ether into the IWETH contract. Consumes less gas then regular `IWETH.deposit`.\\n     * @param weth The IWETH token contract.\\n     * @param amount The amount of Ether to deposit into the IWETH contract.\\n     */\\n    function safeDeposit(IWETH weth, uint256 amount) internal {\\n        bytes4 selector = IWETH.deposit.selector;\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            mstore(0, selector)\\n            if iszero(call(gas(), weth, amount, 0, 4, 0, 0)) {\\n                let ptr := mload(0x40)\\n                returndatacopy(ptr, 0, returndatasize())\\n                revert(ptr, returndatasize())\\n            }\\n        }\\n    }\\n\\n    /**\\n     * @notice Safely withdraws a specified amount of wrapped Ether from the IWETH contract. Consumes less gas then regular `IWETH.withdraw`.\\n     * @dev Uses inline assembly to interact with the IWETH contract.\\n     * @param weth The IWETH token contract.\\n     * @param amount The amount of wrapped Ether to withdraw from the IWETH contract.\\n     */\\n    function safeWithdraw(IWETH weth, uint256 amount) internal {\\n        bytes4 selector = IWETH.withdraw.selector;\\n        assembly (\\\"memory-safe\\\") {  // solhint-disable-line no-inline-assembly\\n            mstore(0, selector)\\n            mstore(4, amount)\\n            if iszero(call(gas(), weth, 0, 0, 0x24, 0, 0)) {\\n                let ptr := mload(0x40)\\n                returndatacopy(ptr, 0, returndatasize())\\n                revert(ptr, returndatasize())\\n            }\\n        }\\n    }\\n\\n    /**\\n     * @notice Safely withdraws a specified amount of wrapped Ether from the IWETH contract to a specified recipient.\\n     * Consumes less gas then regular `IWETH.withdraw`.\\n     * @param weth The IWETH token contract.\\n     * @param amount The amount of wrapped Ether to withdraw from the IWETH contract.\\n     * @param to The recipient of the withdrawn Ether.\\n     */\\n    function safeWithdrawTo(IWETH weth, uint256 amount, address to) internal {\\n        safeWithdraw(weth, amount);\\n        if (to != address(this)) {\\n            assembly (\\\"memory-safe\\\") {  // solhint-disable-line no-inline-assembly\\n                if iszero(call(gas(), to, amount, 0, 0, 0, 0)) {\\n                    let ptr := mload(0x40)\\n                    returndatacopy(ptr, 0, returndatasize())\\n                    revert(ptr, returndatasize())\\n                }\\n            }\\n        }\\n    }\\n\\n    function _getPermit2Address() private view returns (address permit2) {\\n        assembly (\\\"memory-safe\\\") { // solhint-disable-line no-inline-assembly\\n            switch chainid()\\n            case 324 { // zksync mainnet\\n                permit2 := _PERMIT2_ZKSYNC\\n            }\\n            case 300 { // zksync testnet\\n                permit2 := _PERMIT2_ZKSYNC\\n            }\\n            case 260 { // zksync fork network\\n                permit2 := _PERMIT2_ZKSYNC\\n            }\\n            default {\\n                permit2 := _PERMIT2\\n            }\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xc756a120ac3a0271cdfd89db133335deaf31523a06a91ff00eb2be8656e9f85a\",\"license\":\"MIT\"},\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.0) (access/Ownable.sol)\\n\\npragma solidity ^0.8.20;\\n\\nimport {Context} from \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * The initial owner is set to the address provided by the deployer. This can\\n * later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    /**\\n     * @dev The caller account is not authorized to perform an operation.\\n     */\\n    error OwnableUnauthorizedAccount(address account);\\n\\n    /**\\n     * @dev The owner is not a valid owner account. (eg. `address(0)`)\\n     */\\n    error OwnableInvalidOwner(address owner);\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the address provided by the deployer as the initial owner.\\n     */\\n    constructor(address initialOwner) {\\n        if (initialOwner == address(0)) {\\n            revert OwnableInvalidOwner(address(0));\\n        }\\n        _transferOwnership(initialOwner);\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        _checkOwner();\\n        _;\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if the sender is not the owner.\\n     */\\n    function _checkOwner() internal view virtual {\\n        if (owner() != _msgSender()) {\\n            revert OwnableUnauthorizedAccount(_msgSender());\\n        }\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby disabling any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _transferOwnership(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        if (newOwner == address(0)) {\\n            revert OwnableInvalidOwner(address(0));\\n        }\\n        _transferOwnership(newOwner);\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Internal function without access restriction.\\n     */\\n    function _transferOwnership(address newOwner) internal virtual {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb\",\"license\":\"MIT\"},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.4.0) (token/ERC20/IERC20.sol)\\n\\npragma solidity >=0.4.16;\\n\\n/**\\n * @dev Interface of the ERC-20 standard as defined in the ERC.\\n */\\ninterface IERC20 {\\n    /**\\n     * @dev Emitted when `value` tokens are moved from one account (`from`) to\\n     * another (`to`).\\n     *\\n     * Note that `value` may be zero.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    /**\\n     * @dev Emitted when the allowance of a `spender` for an `owner` is set by\\n     * a call to {approve}. `value` is the new allowance.\\n     */\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n\\n    /**\\n     * @dev Returns the value of tokens in existence.\\n     */\\n    function totalSupply() external view returns (uint256);\\n\\n    /**\\n     * @dev Returns the value of tokens owned by `account`.\\n     */\\n    function balanceOf(address account) external view returns (uint256);\\n\\n    /**\\n     * @dev Moves a `value` amount of tokens from the caller's account to `to`.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transfer(address to, uint256 value) external returns (bool);\\n\\n    /**\\n     * @dev Returns the remaining number of tokens that `spender` will be\\n     * allowed to spend on behalf of `owner` through {transferFrom}. This is\\n     * zero by default.\\n     *\\n     * This value changes when {approve} or {transferFrom} are called.\\n     */\\n    function allowance(address owner, address spender) external view returns (uint256);\\n\\n    /**\\n     * @dev Sets a `value` amount of tokens as the allowance of `spender` over the\\n     * caller's tokens.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * IMPORTANT: Beware that changing an allowance with this method brings the risk\\n     * that someone may use both the old and the new allowance by unfortunate\\n     * transaction ordering. One possible solution to mitigate this race\\n     * condition is to first reduce the spender's allowance to 0 and set the\\n     * desired value afterwards:\\n     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address spender, uint256 value) external returns (bool);\\n\\n    /**\\n     * @dev Moves a `value` amount of tokens from `from` to `to` using the\\n     * allowance mechanism. `value` is then deducted from the caller's\\n     * allowance.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(address from, address to, uint256 value) external returns (bool);\\n}\\n\",\"keccak256\":\"0x74ed01eb66b923d0d0cfe3be84604ac04b76482a55f9dd655e1ef4d367f95bc2\",\"license\":\"MIT\"},\"@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.4.0) (token/ERC20/extensions/IERC20Permit.sol)\\n\\npragma solidity >=0.4.16;\\n\\n/**\\n * @dev Interface of the ERC-20 Permit extension allowing approvals to be made via signatures, as defined in\\n * https://eips.ethereum.org/EIPS/eip-2612[ERC-2612].\\n *\\n * Adds the {permit} method, which can be used to change an account's ERC-20 allowance (see {IERC20-allowance}) by\\n * presenting a message signed by the account. By not relying on {IERC20-approve}, the token holder account doesn't\\n * need to send a transaction, and thus is not required to hold Ether at all.\\n *\\n * ==== Security Considerations\\n *\\n * There are two important considerations concerning the use of `permit`. The first is that a valid permit signature\\n * expresses an allowance, and it should not be assumed to convey additional meaning. In particular, it should not be\\n * considered as an intention to spend the allowance in any specific way. The second is that because permits have\\n * built-in replay protection and can be submitted by anyone, they can be frontrun. A protocol that uses permits should\\n * take this into consideration and allow a `permit` call to fail. Combining these two aspects, a pattern that may be\\n * generally recommended is:\\n *\\n * ```solidity\\n * function doThingWithPermit(..., uint256 value, uint256 deadline, uint8 v, bytes32 r, bytes32 s) public {\\n *     try token.permit(msg.sender, address(this), value, deadline, v, r, s) {} catch {}\\n *     doThing(..., value);\\n * }\\n *\\n * function doThing(..., uint256 value) public {\\n *     token.safeTransferFrom(msg.sender, address(this), value);\\n *     ...\\n * }\\n * ```\\n *\\n * Observe that: 1) `msg.sender` is used as the owner, leaving no ambiguity as to the signer intent, and 2) the use of\\n * `try/catch` allows the permit to fail and makes the code tolerant to frontrunning. (See also\\n * {SafeERC20-safeTransferFrom}).\\n *\\n * Additionally, note that smart contract wallets (such as Argent or Safe) are not able to produce permit signatures, so\\n * contracts should have entry points that don't rely on permit.\\n */\\ninterface IERC20Permit {\\n    /**\\n     * @dev Sets `value` as the allowance of `spender` over ``owner``'s tokens,\\n     * given ``owner``'s signed approval.\\n     *\\n     * IMPORTANT: The same issues {IERC20-approve} has related to transaction\\n     * ordering also apply here.\\n     *\\n     * Emits an {Approval} event.\\n     *\\n     * Requirements:\\n     *\\n     * - `spender` cannot be the zero address.\\n     * - `deadline` must be a timestamp in the future.\\n     * - `v`, `r` and `s` must be a valid `secp256k1` signature from `owner`\\n     * over the EIP712-formatted function arguments.\\n     * - the signature must use ``owner``'s current nonce (see {nonces}).\\n     *\\n     * For more information on the signature format, see the\\n     * https://eips.ethereum.org/EIPS/eip-2612#specification[relevant EIP\\n     * section].\\n     *\\n     * CAUTION: See Security Considerations above.\\n     */\\n    function permit(\\n        address owner,\\n        address spender,\\n        uint256 value,\\n        uint256 deadline,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) external;\\n\\n    /**\\n     * @dev Returns the current nonce for `owner`. This value must be\\n     * included whenever a signature is generated for {permit}.\\n     *\\n     * Every successful call to {permit} increases ``owner``'s nonce by one. This\\n     * prevents a signature from being used multiple times.\\n     */\\n    function nonces(address owner) external view returns (uint256);\\n\\n    /**\\n     * @dev Returns the domain separator used in the encoding of the signature for {permit}, as defined by {EIP712}.\\n     */\\n    // solhint-disable-next-line func-name-mixedcase\\n    function DOMAIN_SEPARATOR() external view returns (bytes32);\\n}\\n\",\"keccak256\":\"0x2fa0657dd7b8bc75475a47f64bc04a9adb42236b15d65e6781594ea69a46c3e4\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v5.0.1) (utils/Context.sol)\\n\\npragma solidity ^0.8.20;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n\\n    function _contextSuffixLength() internal view virtual returns (uint256) {\\n        return 0;\\n    }\\n}\\n\",\"keccak256\":\"0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2\",\"license\":\"MIT\"},\"contracts/CumulativeMerkleDrop.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity 0.8.23;\\n\\nimport { Ownable } from \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\nimport { SafeERC20, IERC20 } from \\\"@1inch/solidity-utils/contracts/libraries/SafeERC20.sol\\\";\\n// import \\\"@openzeppelin/contracts/utils/cryptography/MerkleProof.sol\\\";\\n\\nimport { ICumulativeMerkleDrop } from \\\"./interfaces/ICumulativeMerkleDrop.sol\\\";\\n\\n/**\\n * @title CumulativeMerkleDrop\\n * @author 1inch Network\\n * @notice A contract for distributing tokens via Merkle tree proofs with cumulative claim amounts\\n * @dev This contract allows users to claim tokens based on a Merkle tree where each leaf contains\\n * the cumulative amount a user can claim. This design allows for multiple distributions without\\n * requiring users to claim from each one separately.\\n */\\ncontract CumulativeMerkleDrop is Ownable, ICumulativeMerkleDrop {\\n    using SafeERC20 for IERC20;\\n    // using MerkleProof for bytes32[];\\n\\n    /// @notice The ERC20 token being distributed\\n    address public immutable override token; // solhint-disable-line immutable-vars-naming\\n\\n\\n    /// @notice The current Merkle root for the distribution\\n    bytes32 public override merkleRoot;\\n    \\n    /// @notice Mapping of addresses to their cumulative claimed amounts\\n    mapping(address => uint256) public cumulativeClaimed;\\n\\n    /**\\n     * @notice Constructs the CumulativeMerkleDrop contract\\n     * @param token_ The address of the ERC20 token to be distributed\\n     */\\n    constructor(address token_) Ownable(msg.sender) {\\n        token = token_;\\n    }\\n\\n    /**\\n     * @notice Updates the Merkle root for the distribution\\n     * @dev Only callable by the contract owner\\n     * @param merkleRoot_ The new Merkle root to set\\n     */\\n    function setMerkleRoot(bytes32 merkleRoot_) external override onlyOwner {\\n        emit MerkelRootUpdated(merkleRoot, merkleRoot_);\\n        merkleRoot = merkleRoot_;\\n    }\\n\\n    /**\\n     * @notice Claims tokens for a given account using a Merkle proof\\n     * @dev The cumulative amount represents the total tokens the account can claim across all distributions\\n     * @param account The address of the account to claim for\\n     * @param cumulativeAmount The total cumulative amount the account is entitled to\\n     * @param expectedMerkleRoot The Merkle root the proof was generated for\\n     * @param merkleProof The Merkle proof verifying the claim\\n     */\\n    function claim(\\n        address account,\\n        uint256 cumulativeAmount,\\n        bytes32 expectedMerkleRoot,\\n        bytes32[] calldata merkleProof\\n    ) external override {\\n        if (merkleRoot != expectedMerkleRoot) revert MerkleRootWasUpdated();\\n\\n        // Verify the merkle proof\\n        bytes32 leaf = keccak256(abi.encodePacked(account, cumulativeAmount));\\n        if (!_verifyAsm(merkleProof, expectedMerkleRoot, leaf)) revert InvalidProof();\\n\\n        // Mark it claimed\\n        uint256 preclaimed = cumulativeClaimed[account];\\n        // solhint-disable-next-line gas-strict-inequalities\\n        if (preclaimed >= cumulativeAmount) revert NothingToClaim();\\n        cumulativeClaimed[account] = cumulativeAmount;\\n\\n        // Send the token\\n        unchecked {\\n            uint256 amount = cumulativeAmount - preclaimed;\\n            IERC20(token).safeTransfer(account, amount);\\n            emit Claimed(account, amount);\\n        }\\n    }\\n\\n    // function verify(bytes32[] calldata merkleProof, bytes32 root, bytes32 leaf) public pure returns (bool) {\\n    //     return merkleProof.verify(root, leaf);\\n    // }\\n\\n    /**\\n     * @notice Verifies a Merkle proof using assembly for gas optimization\\n     * @dev Uses sorted pairs when hashing to match the proof generation\\n     * @param proof The Merkle proof to verify\\n     * @param root The Merkle root to verify against\\n     * @param leaf The leaf node to verify\\n     * @return valid True if the proof is valid, false otherwise\\n     */\\n    function _verifyAsm(bytes32[] calldata proof, bytes32 root, bytes32 leaf) private pure returns (bool valid) {\\n        /// @solidity memory-safe-assembly\\n        assembly {  // solhint-disable-line no-inline-assembly\\n            let ptr := proof.offset\\n\\n            for { let end := add(ptr, mul(0x20, proof.length)) } lt(ptr, end) { ptr := add(ptr, 0x20) } {\\n                let node := calldataload(ptr)\\n\\n                switch lt(leaf, node)\\n                case 1 {\\n                    mstore(0x00, leaf)\\n                    mstore(0x20, node)\\n                }\\n                default {\\n                    mstore(0x00, node)\\n                    mstore(0x20, leaf)\\n                }\\n\\n                leaf := keccak256(0x00, 0x40)\\n            }\\n\\n            valid := eq(root, leaf)\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xe5aed7d0ea8f3e068c3a046e8e303f2febc044d7ee3c452bc05e7c1f4e95d076\",\"license\":\"MIT\"},\"contracts/interfaces/ICumulativeMerkleDrop.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\npragma abicoder v1;\\n\\n/**\\n * @title ICumulativeMerkleDrop\\n * @author 1inch Network\\n * @notice Interface for cumulative Merkle drop contracts\\n * @dev Allows anyone to claim tokens if they exist in a merkle root with cumulative balances\\n */\\ninterface ICumulativeMerkleDrop {\\n    /**\\n     * @notice Emitted when the Merkle root is updated\\n     * @param oldMerkleRoot The previous Merkle root\\n     * @param newMerkleRoot The new Merkle root\\n     */\\n    event MerkelRootUpdated(bytes32 oldMerkleRoot, bytes32 newMerkleRoot);\\n    \\n    /**\\n     * @notice Emitted when tokens are successfully claimed\\n     * @param account The account that claimed tokens\\n     * @param amount The amount of tokens claimed\\n     */\\n    event Claimed(address indexed account, uint256 amount); // solhint-disable-line gas-indexed-events\\n\\n    error InvalidProof();\\n    error NothingToClaim();\\n    error MerkleRootWasUpdated();\\n\\n    /**\\n     * @notice Returns the address of the token distributed by this contract\\n     * @return The ERC20 token address\\n     */\\n    function token() external view returns (address);\\n    \\n    /**\\n     * @notice Returns the merkle root of the merkle tree containing cumulative account balances available to claim\\n     * @return The current Merkle root\\n     */\\n    function merkleRoot() external view returns (bytes32);\\n    \\n    /**\\n     * @notice Sets the merkle root of the merkle tree containing cumulative account balances available to claim\\n     * @param merkleRoot_ The new Merkle root to set\\n     */\\n    function setMerkleRoot(bytes32 merkleRoot_) external;\\n    \\n    /**\\n     * @notice Claim the given amount of the token to the given address\\n     * @dev Reverts if the inputs are invalid\\n     * @param account The address of the account to claim for\\n     * @param cumulativeAmount The total cumulative amount the account is entitled to\\n     * @param expectedMerkleRoot The Merkle root the proof was generated for\\n     * @param merkleProof The Merkle proof verifying the claim\\n     */\\n    function claim(\\n        address account,\\n        uint256 cumulativeAmount,\\n        bytes32 expectedMerkleRoot,\\n        bytes32[] calldata merkleProof\\n    ) external;\\n}\\n\",\"keccak256\":\"0xf3a8f5d39d07f5af41042beda8a74accfb1310649aec59e319baca897978a089\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561000f575f80fd5b5060405161080938038061080983398101604081905261002e916100bd565b338061005357604051631e4fbdf760e01b81525f600482015260240160405180910390fd5b61005c8161006e565b506001600160a01b03166080526100ea565b5f80546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b5f602082840312156100cd575f80fd5b81516001600160a01b03811681146100e3575f80fd5b9392505050565b6080516107006101095f395f818161014a01526102cc01526107005ff3fe608060405234801561000f575f80fd5b5060043610610085575f3560e01c80638da5cb5b116100585780638da5cb5b146100d5578063a991957614610113578063f2fde38b14610132578063fc0c546a14610145575f80fd5b80631d7d4ebc146100895780632eb4a7ab1461009e578063715018a6146100ba5780637cb64759146100c2575b5f80fd5b61009c610097366004610604565b61016c565b005b6100a760015481565b6040519081526020015b60405180910390f35b61009c61034d565b61009c6100d0366004610693565b610360565b5f5473ffffffffffffffffffffffffffffffffffffffff165b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100b1565b6100a76101213660046106aa565b60026020525f908152604090205481565b61009c6101403660046106aa565b6103a9565b6100ee7f000000000000000000000000000000000000000000000000000000000000000081565b82600154146101a7576040517f2dd913f700000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6040517fffffffffffffffffffffffffffffffffffffffff000000000000000000000000606087901b166020820152603481018590525f9060540160405160208183030381529060405280519060200120905061020683838684610411565b61023c576040517f09bde33900000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b73ffffffffffffffffffffffffffffffffffffffff86165f9081526002602052604090205485811061029a576040517f969bf72800000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b73ffffffffffffffffffffffffffffffffffffffff8088165f908152600260205260409020879055818703906102f3907f0000000000000000000000000000000000000000000000000000000000000000168983610460565b8773ffffffffffffffffffffffffffffffffffffffff167fd8138f8a3f377c5259ca548e70e4c2de94f129f5a11036a15b69513cba2b426a8260405161033b91815260200190565b60405180910390a25050505050505050565b6103556104c7565b61035e5f610519565b565b6103686104c7565b60015460408051918252602082018390527f936fd71fceff3b4f98f4935ac269e4f94b4b25e3e38c519d3ff3db222a27117a910160405180910390a1600155565b6103b16104c7565b73ffffffffffffffffffffffffffffffffffffffff8116610405576040517f1e4fbdf70000000000000000000000000000000000000000000000000000000081525f60048201526024015b60405180910390fd5b61040e81610519565b50565b5f848460200281015b808210156104565781358085106001811461043b57815f5285602052610443565b855f52816020525b505060405f20935060208201915061041a565b5050501492915050565b61048c837fa9059cbb00000000000000000000000000000000000000000000000000000000848461058d565b6104c2576040517ffb7f507900000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b505050565b5f5473ffffffffffffffffffffffffffffffffffffffff16331461035e576040517f118cdaa70000000000000000000000000000000000000000000000000000000081523360048201526024016103fc565b5f805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b5f60405184815283600482015282602482015260205f6044835f8a5af191505080156105d4573d80156105cb5760015f5114601f3d111691506105d2565b5f863b1191505b505b949350505050565b803573ffffffffffffffffffffffffffffffffffffffff811681146105ff575f80fd5b919050565b5f805f805f60808688031215610618575f80fd5b610621866105dc565b94506020860135935060408601359250606086013567ffffffffffffffff8082111561064b575f80fd5b818801915088601f83011261065e575f80fd5b81358181111561066c575f80fd5b8960208260051b8501011115610680575f80fd5b9699959850939650602001949392505050565b5f602082840312156106a3575f80fd5b5035919050565b5f602082840312156106ba575f80fd5b6106c3826105dc565b939250505056fea26469706673582212206299fb9eca7f1ad3ea36cdbeea5dc9e6cdf95b5c729a275385069629428ea46c64736f6c63430008170033",
+  "deployedBytecode": "0x608060405234801561000f575f80fd5b5060043610610085575f3560e01c80638da5cb5b116100585780638da5cb5b146100d5578063a991957614610113578063f2fde38b14610132578063fc0c546a14610145575f80fd5b80631d7d4ebc146100895780632eb4a7ab1461009e578063715018a6146100ba5780637cb64759146100c2575b5f80fd5b61009c610097366004610604565b61016c565b005b6100a760015481565b6040519081526020015b60405180910390f35b61009c61034d565b61009c6100d0366004610693565b610360565b5f5473ffffffffffffffffffffffffffffffffffffffff165b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100b1565b6100a76101213660046106aa565b60026020525f908152604090205481565b61009c6101403660046106aa565b6103a9565b6100ee7f000000000000000000000000000000000000000000000000000000000000000081565b82600154146101a7576040517f2dd913f700000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b6040517fffffffffffffffffffffffffffffffffffffffff000000000000000000000000606087901b166020820152603481018590525f9060540160405160208183030381529060405280519060200120905061020683838684610411565b61023c576040517f09bde33900000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b73ffffffffffffffffffffffffffffffffffffffff86165f9081526002602052604090205485811061029a576040517f969bf72800000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b73ffffffffffffffffffffffffffffffffffffffff8088165f908152600260205260409020879055818703906102f3907f0000000000000000000000000000000000000000000000000000000000000000168983610460565b8773ffffffffffffffffffffffffffffffffffffffff167fd8138f8a3f377c5259ca548e70e4c2de94f129f5a11036a15b69513cba2b426a8260405161033b91815260200190565b60405180910390a25050505050505050565b6103556104c7565b61035e5f610519565b565b6103686104c7565b60015460408051918252602082018390527f936fd71fceff3b4f98f4935ac269e4f94b4b25e3e38c519d3ff3db222a27117a910160405180910390a1600155565b6103b16104c7565b73ffffffffffffffffffffffffffffffffffffffff8116610405576040517f1e4fbdf70000000000000000000000000000000000000000000000000000000081525f60048201526024015b60405180910390fd5b61040e81610519565b50565b5f848460200281015b808210156104565781358085106001811461043b57815f5285602052610443565b855f52816020525b505060405f20935060208201915061041a565b5050501492915050565b61048c837fa9059cbb00000000000000000000000000000000000000000000000000000000848461058d565b6104c2576040517ffb7f507900000000000000000000000000000000000000000000000000000000815260040160405180910390fd5b505050565b5f5473ffffffffffffffffffffffffffffffffffffffff16331461035e576040517f118cdaa70000000000000000000000000000000000000000000000000000000081523360048201526024016103fc565b5f805473ffffffffffffffffffffffffffffffffffffffff8381167fffffffffffffffffffffffff0000000000000000000000000000000000000000831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b5f60405184815283600482015282602482015260205f6044835f8a5af191505080156105d4573d80156105cb5760015f5114601f3d111691506105d2565b5f863b1191505b505b949350505050565b803573ffffffffffffffffffffffffffffffffffffffff811681146105ff575f80fd5b919050565b5f805f805f60808688031215610618575f80fd5b610621866105dc565b94506020860135935060408601359250606086013567ffffffffffffffff8082111561064b575f80fd5b818801915088601f83011261065e575f80fd5b81358181111561066c575f80fd5b8960208260051b8501011115610680575f80fd5b9699959850939650602001949392505050565b5f602082840312156106a3575f80fd5b5035919050565b5f602082840312156106ba575f80fd5b6106c3826105dc565b939250505056fea26469706673582212206299fb9eca7f1ad3ea36cdbeea5dc9e6cdf95b5c729a275385069629428ea46c64736f6c63430008170033",
+  "devdoc": {
+    "author": "1inch Network",
+    "details": "This contract allows users to claim tokens based on a Merkle tree where each leaf contains the cumulative amount a user can claim. This design allows for multiple distributions without requiring users to claim from each one separately.",
+    "errors": {
+      "OwnableInvalidOwner(address)": [
+        {
+          "details": "The owner is not a valid owner account. (eg. `address(0)`)"
+        }
+      ],
+      "OwnableUnauthorizedAccount(address)": [
+        {
+          "details": "The caller account is not authorized to perform an operation."
+        }
+      ]
+    },
+    "events": {
+      "Claimed(address,uint256)": {
+        "params": {
+          "account": "The account that claimed tokens",
+          "amount": "The amount of tokens claimed"
+        }
+      },
+      "MerkelRootUpdated(bytes32,bytes32)": {
+        "params": {
+          "newMerkleRoot": "The new Merkle root",
+          "oldMerkleRoot": "The previous Merkle root"
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "claim(address,uint256,bytes32,bytes32[])": {
+        "details": "The cumulative amount represents the total tokens the account can claim across all distributions",
+        "params": {
+          "account": "The address of the account to claim for",
+          "cumulativeAmount": "The total cumulative amount the account is entitled to",
+          "expectedMerkleRoot": "The Merkle root the proof was generated for",
+          "merkleProof": "The Merkle proof verifying the claim"
+        }
+      },
+      "constructor": {
+        "params": {
+          "token_": "The address of the ERC20 token to be distributed"
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+      },
+      "setMerkleRoot(bytes32)": {
+        "details": "Only callable by the contract owner",
+        "params": {
+          "merkleRoot_": "The new Merkle root to set"
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "CumulativeMerkleDrop",
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "Claimed(address,uint256)": {
+        "notice": "Emitted when tokens are successfully claimed"
+      },
+      "MerkelRootUpdated(bytes32,bytes32)": {
+        "notice": "Emitted when the Merkle root is updated"
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "claim(address,uint256,bytes32,bytes32[])": {
+        "notice": "Claims tokens for a given account using a Merkle proof"
+      },
+      "constructor": {
+        "notice": "Constructs the CumulativeMerkleDrop contract"
+      },
+      "cumulativeClaimed(address)": {
+        "notice": "Mapping of addresses to their cumulative claimed amounts"
+      },
+      "merkleRoot()": {
+        "notice": "The current Merkle root for the distribution"
+      },
+      "setMerkleRoot(bytes32)": {
+        "notice": "Updates the Merkle root for the distribution"
+      },
+      "token()": {
+        "notice": "The ERC20 token being distributed"
+      }
+    },
+    "notice": "A contract for distributing tokens via Merkle tree proofs with cumulative claim amounts",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 1109,
+        "contract": "contracts/CumulativeMerkleDrop.sol:CumulativeMerkleDrop",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 5830,
+        "contract": "contracts/CumulativeMerkleDrop.sol:CumulativeMerkleDrop",
+        "label": "merkleRoot",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_bytes32"
+      },
+      {
+        "astId": 5835,
+        "contract": "contracts/CumulativeMerkleDrop.sol:CumulativeMerkleDrop",
+        "label": "cumulativeClaimed",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
