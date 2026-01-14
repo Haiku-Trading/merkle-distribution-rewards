@@ -132,6 +132,48 @@ task('verify-deployment', 'Verify a deployed merkle drop contract on Etherscan u
     });
 
 /**
+ * Verify CumulativeMerkleDrop Contract on Basescan
+ *
+ * Description:
+ *   Verifies a previously deployed CumulativeMerkleDrop contract on Basescan
+ *   (or the appropriate block explorer for the network). Uses saved
+ *   deployment artifacts to provide constructor arguments.
+ *
+ * Usage:
+ *   yarn hardhat verify-cumulative --network base
+ *
+ * Examples:
+ *   # Verify CumulativeMerkleDrop on base network
+ *   yarn hardhat verify-cumulative --network base
+ *
+ * Note:
+ *   Requires deployment artifacts to exist in deployments/<network>/CumulativeMerkleDrop.json
+ */
+task('verify-cumulative', 'Verify CumulativeMerkleDrop contract on Basescan using deployment artifacts')
+    .setAction(async (taskArgs, hre) => {
+        const { deployments } = hre;
+    
+        const deployed = await deployments.getOrNull('CumulativeMerkleDrop');
+    
+        if (!deployed) {
+            console.error('❌ Deployment file not found for CumulativeMerkleDrop');
+            console.error('   Expected location: deployments/<network>/CumulativeMerkleDrop.json');
+            return;
+        }
+    
+        console.log('\n🔍 Verifying CumulativeMerkleDrop contract...');
+        console.log(`📍 Contract address: ${deployed.address}`);
+        console.log(`📝 Constructor args: ${JSON.stringify(deployed.args)}\n`);
+    
+        await hre.run('verify:verify', {
+            address: deployed.address,
+            constructorArguments: deployed.args,
+        });
+    
+        console.log('\n✅ Contract verified successfully!\n');
+    });
+
+/**
  * Verify Links for Deployed Contract
  *
  * Description:
@@ -247,13 +289,20 @@ task('rescue', 'Rescue remaining tokens from a deployed merkle drop contract')
 // Update etherscan config to include Base network
 const etherscanConfig = {
     ...etherscan,
+    apiKey: {
+        ...(etherscan.apiKey ? (typeof etherscan.apiKey === 'string' 
+            ? { mainnet: etherscan.apiKey } 
+            : etherscan.apiKey) 
+        : {}),
+        base: process.env.BASESCAN_API_KEY || process.env.ETHERSCAN_API_KEY || '',
+    },
     customChains: [
         ...(etherscan.customChains || []),
         {
             network: 'base',
             chainId: 8453,
             urls: {
-                apiURL: 'https://api.basescan.org/api',
+                apiURL: 'https://api.etherscan.io/v2/api?chainid=8453',
                 browserURL: 'https://basescan.org',
             },
         },
